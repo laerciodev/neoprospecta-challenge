@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Customer } from '../models';
 import { Observable } from 'rxjs';
 
-const GET_URL = 'http://private-92a969-processoseletivo1.apiary-mock.com/customers';
-const POST_URL = 'https://private-92a969-processoseletivo1.apiary-mock.com/customers/';
+const GET_URL =
+  'https://private-92a969-processoseletivo1.apiary-mock.com/customers';
+const POST_URL =
+  'https://private-92a969-processoseletivo1.apiary-mock.com/customers/';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CustomerService {
-
   constructor(private http: HttpClient) {}
 
   public getAllCustomers(): Observable<Customer[]> {
